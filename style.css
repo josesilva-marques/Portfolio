@@ -1,0 +1,198 @@
+/* Reset Básico para melhor consistência entre navegadores */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  line-height: 1.6;
+
+  background-color: #f4f4f4; /* Cor de fundo suave */
+
+  color: #333; /* Cor do texto principal */
+}
+
+/* Estilização do Header e Navegação */
+
+header {
+  background-color: #333;
+
+  color: #fff;
+
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex; /* Alinha itens na horizontal */
+
+  justify-content: space-between; /* Espaça o nome/logo e a lista de links */
+
+  align-items: center;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none; /* Remove os marcadores de lista */
+
+  display: flex;
+}
+
+nav ul li a {
+  color: #fff;
+
+  text-decoration: none; /* Remove sublinhado */
+
+  padding: 0.5rem 1rem;
+
+  display: block;
+
+  transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+nav ul li a:hover {
+  background-color: #555;
+
+  border-radius: 5px;
+}
+
+/* Estilização das Seções */
+
+section {
+  padding: 60px 20px;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+/* Seção de Início/Hero */
+
+#inicio {
+  background-color: #e0e0e0;
+
+  text-align: center;
+}
+
+#inicio h2 {
+  font-size: 2.5rem;
+
+  margin-bottom: 10px;
+}
+
+.btn-principal {
+  display: inline-block;
+
+  background-color: #007bff; /* Cor principal de ação */
+
+  color: #fff;
+
+  padding: 10px 20px;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+
+  margin-top: 20px;
+}
+
+.btn-principal:hover {
+  background-color: #0056b3;
+}
+
+/* Estilização dos Projetos (Flexbox/Grid para Layout) */
+
+#projetos {
+  background-color: #fff;
+}
+
+#projetos h3 {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+/* Usando Grid para layout de projetos em várias colunas */
+
+#projetos > div {
+  /* Seleciona os containers de projetos */
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* 300px de largura mínima por coluna */
+
+  gap: 20px;
+}
+
+.projeto-card {
+  background-color: #f9f9f9;
+
+  padding: 20px;
+
+  border-radius: 8px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-card h4 {
+  margin-bottom: 10px;
+
+  color: #007bff;
+}
+
+/* Estilização do Rodapé */
+
+footer {
+  text-align: center;
+
+  padding: 20px;
+
+  background-color: #333;
+
+  color: #fff;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column; /* Empilha logo e menu em telas pequenas */
+  }
+
+  nav ul {
+    margin-top: 10px;
+
+    flex-direction: column; /* Empilha os links do menu */
+
+    text-align: center;
+
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 10px 0;
+
+    border-top: 1px solid #555;
+  }
+
+  #inicio h2 {
+    font-size: 2rem;
+  }
+}
